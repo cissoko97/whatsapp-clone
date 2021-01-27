@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   native: String = '';
   darkMode = false;
 
-  constructor() {
+  constructor(private _themeService: ThemeService) {
 
   }
 
@@ -19,5 +20,9 @@ export class AppComponent {
     console.log(event?.emoji?.native);
     this.native = `Bonjour ${event?.emoji?.native} D'accord Mais je ne sais pas comment faire ça`;
     this.darkMode = !this.darkMode;
+  }
+
+  changeTheme() {
+    this._themeService.setThemeValue();
   }
 }

@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+.icon {
+  color: var(--icon-color);
+  font-size: 1.5rem;
+  height: 24px;
+  // padding: 8px !important;
+  width: 24px;
+
+  &::before{
+    padding: 8px;
+  }
+}
+
+
+html[data-theme="light"] {
+  --bg: #fcfcfc;
+  --icon-color: #252424;
+  --bg-img:
+}
+
+html[data-theme="dark"] {
+  --bg: #000000;
+  --icon-color: #fcfcfc;
+}
+
+body {
+  background-color: var(--bg);
+}

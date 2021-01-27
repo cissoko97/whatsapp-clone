@@ -1,0 +1,59 @@
+.app {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  z-index: 100;
+  top: 19px;
+  width: 1360px;
+  margin: auto;
+  transition: all 500ms !important;
+  transition-delay: 0 !important;
+  height: calc(100% - 38px);
+
+  .contact {
+    height: 100%;
+    flex: 30%;
+  }
+
+  .chat {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .info-contact {
+    height: 100%;
+    width: 410px;
+    position: absolute;
+    z-index: 10;
+    left: 410px;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .app {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+
+    .contact {
+      height: 100%;
+      flex: 30%;
+    }
+
+    .chat {
+      height: 100%;
+      flex: 70%;
+      position: relative;
+    }
+
+    .info-contact {
+      height: 100%;
+      width: 410px;
+      position: absolute;
+      z-index: 10;
+      left: 410px;
+    }
+  }
+}
