@@ -1,4 +1,7 @@
-<app-header (icon1OutPut)="log()" [icon1]="'vinyl'" [icon2]="'chat-left-text'" [icon3]="'three-dots-vertical'">
+<!-- {{ CONTACTS[49].name }} -->
+<app-header (icon1OutPut)="changeTheme()" [icon1]="'app'" [icon2]="'chat-left-text'" [icon3]="'three-dots-vertical'">
 </app-header>
-<button class="btn" (click)="changeTheme()">switch between theme</button>
-<i class="bi-search icon"></i>
+<app-search-fill></app-search-fill>
+<div class="contact-list">
+  <app-contact-item *ngFor="let contact of CONTACTS" [detail]="contact"></app-contact-item>
+</div>

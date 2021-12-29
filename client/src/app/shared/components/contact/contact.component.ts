@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/dummy-serve/data-service/data.service';
+import { IContact } from 'src/app/models';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
@@ -8,9 +10,11 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private _themeService: ThemeService) { }
+  CONTACTS: Array<IContact> = new Array();
+  constructor(private _themeService: ThemeService, private _dummyData: DataService) { }
 
   ngOnInit(): void {
+    this.CONTACTS = this._dummyData.getContacts();
   }
 
   changeTheme() {

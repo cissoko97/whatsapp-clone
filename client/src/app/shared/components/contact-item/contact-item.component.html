@@ -1,0 +1,8 @@
+<img [src]="detail?.avatar" alt="avatar" class="avatar">
+<div class="info">
+  <div class="sub-info">
+    <span>{{ detail?.name }} </span>
+    <span>{{ detail?.lastMailHourse |date:'HH:mm' }} </span>
+  </div>
+  <span class="last-mail">{{ detail?.lastMail }} </span>
+</div>

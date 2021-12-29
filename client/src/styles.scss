@@ -19,7 +19,7 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 750ms !important;
+  transition: all 400ms !important;
   transition-delay: 0 !important;
 }
 
@@ -27,19 +27,19 @@ html.transition *:after {
   color: var(--icon-color);
   font-size: 1.5rem;
   height: 24px;
-  // padding: 8px !important;
+  cursor: pointer;
+  margin: 0 0 0 10px !important;
   width: 24px;
 
-  &::before{
+  &::before {
     padding: 8px;
   }
 }
 
-
 html[data-theme="light"] {
   --bg: #fcfcfc;
   --icon-color: #252424;
-  --bg-img:
+  --bg-img: ;
 }
 
 html[data-theme="dark"] {
