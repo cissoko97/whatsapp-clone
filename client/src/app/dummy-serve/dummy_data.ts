@@ -5,7 +5,7 @@ import { IContact } from '../models';
 let CONTACTS: Array<IContact> = new Array();
 
 
-for (let i = 1; i <= 50; i++) {
+for (let i = 1; i <= 25; i++) {
   const contact: IContact = {
     id: random.uuid(),
     name: name.firstName(),
